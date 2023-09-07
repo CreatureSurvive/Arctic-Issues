@@ -1,0 +1,62 @@
+---
+name: Bug Report
+description: File a new bug report to help improve Arctic
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: >
+        Thank you for taking the time to submit an issue! While filling out this form, please try and be as descriptive as possible, this will assist in both reproducing, and resolving most issues.
+  - type: checkboxes
+    attributes:
+      label: Check for open issues
+      description: >
+        If an open issue already exists for this subject, please comment on that issue to provide additional context.
+      options:
+        - label: I have verified that another issue for this is not open, or it has been closed and has not been fixed.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Minimal reproducible example
+      description: >
+        Please explain in as much detail as possible how to reproduce the issue. If you are unsure how to reproduce the issue, then explain what you were doing when you encountered the issue. If possible, please provide a screenshot, or recording of the issue.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: >
+        Describe what the expected behavior would be, and what is happening instead.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: |
+        The version of Arctic you are currently running: eg: v0.2.0
+    validations:
+      required: true
+  - type: dropdown
+    id: osVersion
+    attributes:
+      label: iOS Version
+      description: |
+        Which version of iOS are you running?
+      options:
+        - 17.x Beta
+        - 16.x
+        - 15.x
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device
+      description: |
+        What device are you using eg: (iPhone 11 Pro Max | iPad Pro 11 inch 4th Generation)
+    validations:
+      required: true
